@@ -63,7 +63,7 @@ export const MENU_OPTIONS = [
     slug: "#aboutUs"
   },
   {
-    label: "Modo",
+    label: "Modalidad",
     slug: "#mode"
   },
   {

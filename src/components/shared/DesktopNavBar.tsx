@@ -25,27 +25,27 @@ export const DesktopNavBar = () => {
       return () => window.removeEventListener("scroll", handleScroll);
     }, [])
   
-   return (<div className="w-full max-w-screen-2xl m-auto p-10">
+   return (<div className="w-3/4 m-auto px-10 py-8">
           <motion.div 
-              className={`m-auto p-5 backdrop-blur-lg flex items-center justify-between rounded-full ${
-                isSticky ? "fixed top-0 right-0 left-0 z-50 bg-black bg-opacity-80 max-w-screen-md" : ""
+               className={`mx-auto py-2.5 px-6 backdrop-blur-xl bg-white/80 flex items-center justify-between rounded-full border border-white/30 ${
+                isSticky ? "fixed top-5 left-0 right-0 z-50 bg-white/80 max-w-5xl shadow-lg shadow-black/10" : ""
               }`}
               style={{ opacity }}
               initial={{ y: 0 }}
               animate={{ y: isSticky ? 20 : 0 }}
-              transition={{ type: "spring", stiffness: 100 }}
+              transition={{ type: "spring", stiffness: 100, damping: 15 }}
             >
   
             <div className="flex items-center space-x-3">
-              <Image className="rounded-full" src="/images/Logo.jpeg" alt="logo" width={70} height={70}></Image>
-              <h1 className="text-2xl font-bold text-white">Plasmá</h1>
+              <Image className="rounded-full ring-2 ring-white/40" src="/images/Logo.jpg" alt="logo" width={56} height={56}></Image>
+              <h1 className="text-xl font-semibold text-gray-900 tracking-tight">Plasmá</h1>
             </div>
             
             <nav>
-              <ul className="flex space-x-10">
+              <ul className="flex items-center space-x-8">
                 {MENU_OPTIONS.map((item, index) => {
                   return <li key={index}>
-                  <Link href={item.slug} className="text-white hover:text-gray-200 hover:font-bold">
+                  <Link href={item.slug} className="text-gray-600 hover:text-gray-900 text-base font-medium transition-colors duration-200">
                     {item.label}
                   </Link>
                 </li>
@@ -53,7 +53,7 @@ export const DesktopNavBar = () => {
               </ul>
             </nav>
             <Link href={"#services"}>
-              <Button type="outlinePrimary" >Servicios</Button>
+              <Button type="outlineSecondary" >Servicios</Button>
             </Link>
             </motion.div>
           </div> )

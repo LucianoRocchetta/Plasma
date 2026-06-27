@@ -14,7 +14,7 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },

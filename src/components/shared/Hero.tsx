@@ -21,7 +21,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <header className="relative w-[95%] mt-2 lg:w-[98%] m-auto lg:mt-5 h-[800px] rounded-xl" id="header">
+    <header className="relative w-[85%] mt-2 m-auto lg:mt-5 h-[800px] rounded-xl" id="header">
       <Image
         src={
           "https://images.unsplash.com/photo-1736325680518-397f54bd1086?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -38,9 +38,9 @@ export default function Hero() {
         
 
         <div className="flex-1 flex flex-col items-start justify-end w-full mx-auto space-y-5 mb-20 max-w-screen-2xl m-auto lg:p-10 lg:space-y-10">
-          <h2 className="text-4xl lg:text-6xl text-white max-w-[1024px] ">
-            El servicio medico on demand que tu consultorio necesita
-          </h2>
+          <h2 className="text-4xl lg:text-6xl text-white font-thin max-w-[1024px]">
+  El servicio medico <span className="font-bold">on demand</span> que tu consultorio necesita
+</h2>
           <div className="flex gap-3">
             <Button type="primary">Reservar turno</Button>
             <Link href={"#contact"} >

@@ -27,8 +27,8 @@ export const ModeCard = ({ imageURL, title, description, mirrored, children }: m
             }}
         >
 
-            <div className="relative w-full md:w-1/2 h-[250px] md:h-full">
-                <Image alt={title} src={imageURL} fill className="rounded-xl object-cover" />
+            <div className="relative w-full md:w-1/2 h-[250px] md:h-full rounded-2xl overflow-hidden shadow-lg">
+                <Image alt={title} src={imageURL} fill className="object-cover" />
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col h-full items-start justify-center space-y-5">

@@ -4,10 +4,11 @@ import { MODE_INFO } from "@/assets/constants"
 
 const Mode = () => {
     return (
-    <section className="max-w-screen-2xl m-auto p-10 mt-10" id="mode">
+    <section className="bg-gray-50/50 py-16 lg:py-24" id="mode">
+        <div className="max-w-7xl m-auto px-10">
         <SectionHeader title="Operá con eficiencia" badge="Modalidad"/>
 
-        <div className="space-y-10">
+        <div className="space-y-16 lg:space-y-24">
                <ModeCard 
                     description={MODE_INFO[0].description} 
                     imageURL={MODE_INFO[0].imageURL}
@@ -26,8 +27,9 @@ const Mode = () => {
                 ><Badge label="Aplicación" type="secondary"/></ModeCard>
         </div>
 
-        <div className="w-full p-5 mt-20 bg-gray-100 rounded-full flex items-center justify-end ">
+        <div className="w-full p-5 mt-16 lg:mt-20 bg-white rounded-2xl shadow-sm border border-gray-100 flex items-center justify-end">
             <Button type="secondary">Reservar cita</Button>
+        </div>
         </div>
     </section>
     )

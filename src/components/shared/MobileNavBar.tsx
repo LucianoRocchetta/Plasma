@@ -31,19 +31,19 @@ export const MobileNavBar = () => {
       <div className="w-full">
         {!isNavActivated &&
         <motion.div
-          className={`p-5 backdrop-blur-lg flex items-center justify-between rounded-full ${
-            isSticky ? "fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 rounded-none" : "relative"
+          className={`px-6 py-3 backdrop-blur-xl bg-black/60 flex items-center justify-between rounded-full border border-white/10 ${
+            isSticky ? "fixed top-0 left-0 right-0 z-50 bg-black/80 rounded-none border-0" : "relative"
           }`}
           style={{ opacity }}
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 100 }}
+          transition={{ type: "spring", stiffness: 100, damping: 15 }}
         >
             <div className="flex items-center space-x-3">
-                <Image className="rounded-full" src="/images/Logo.jpeg" alt="logo" width={50} height={50}></Image>
-                <h1 className="text-2xl font-bold text-white">Plasmá</h1>
+                <Image className="rounded-full ring-2 ring-white/20" src="/images/Logo.jpg" alt="logo" width={44} height={44}></Image>
+                <h1 className="text-xl font-semibold text-white tracking-tight">Plasmá</h1>
             </div>
-          <IconMenu4 size={32} color="white" onClick={handleNav} className="cursor-pointer" />
+          <IconMenu4 size={28} color="white" onClick={handleNav} className="cursor-pointer" />
         </motion.div>
         }
   
